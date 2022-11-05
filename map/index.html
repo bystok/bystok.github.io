@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interesting places on Podlasie</title>
-	 <link rel="stylesheet" href="leaflet/leaflet.css" />
-	 <script src="leaflet/leaflet.js"></script>
-     <style>
-         body {
-             padding: 0;
-             margin: 0;
-         }
-         html, body, #map {
-             height: 100%;
-             width: 100%;
-         }
-     </style>
+    <title>Interesting places on Podlasie</title>
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+	<script src="leaflet/leaflet.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <div id="map"></div>
 
 <script>
-    var map = L.map('map').setView([53.130818, 23.165722], 13);
+    function copy(text) {
+        var input = document.createElement('input');
+        input.setAttribute('value', text);
+        document.body.appendChild(input);
+        input.select();
+        var result = document.execCommand('copy');
+        document.body.removeChild(input);
+        return result;
+    }
+     
+    function onMapClick(e) {
+        copy(e.latlng.lat.toPrecision(8) + ", " + e.latlng.lng.toPrecision(8));
+    }
+    
+    var LeafIcon = L.Icon.extend({
+        options: {
+            iconSize:     [22, 36],
+            iconAnchor:   [11, 36], // point of the icon which will correspond to marker's location
+        }
+    });
+    
+    var interestingIcon = new LeafIcon({iconUrl: 'icons/interesting_icon.png'}),
+        walkIcon = new LeafIcon({iconUrl: 'icons/walk_icon.png'}),
+        swimIcon = new LeafIcon({iconUrl: 'icons/swim_icon.png'}),
+        grillIcon = new LeafIcon({iconUrl: 'icons/grill_icon.png'});
+    
+    var map = L.map('map').setView([53.130818, 23.165722], 11);
+    
+    const places = [
+            [[53.130818, 23.165722], interestingIcon, 'photos/Branicki_Palace_in_Białystok.jpg', 'Палац Браницких - главная достопримечательность Белостока.', 'https://goo.gl/maps/WjDGw8ULBJ8tFVD58'],
+            [[53.110443, 23.217133], swimIcon, 'photos/Doilidy_beach.jpg', 'Пляж на дойлидах - самое популярное место для купания в Белостоке.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
+            [[53.108273, 23.223993], walkIcon, 'photos/Doilidy_park.jpg', 'Парк и остров на дойлидах. Отличное место для прогулки. Есть тренажеры и детская площадка.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
+            [[53.129666, 23.112108], grillIcon, 'photos/Stawy_marczukowskie.jpg', 'Ставы Марчуковские, небольшое место для прогулок. Есть стационарны грль, но часто занят.', 'https://goo.gl/maps/A4e3GXfW6BuCwvwM9'],
+    
+    ]
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([53.130818, 23.165722]).addTo(map)
-        .bindPopup('Branicki Palace.<br> Is here!')
-        .openPopup();
+    for (const place of places) {
+        L.marker(place[0], {icon: place[1]}).addTo(map).bindPopup('<img src="'+ place[2] +' " style="max-width:300px"></br>' + place[3] + '</br><a href="'+ place[4] +'" target="_blank">Google maps</a></br>');
+    }
+        
+    map.on('click', onMapClick);
 </script>
 
 </body>
