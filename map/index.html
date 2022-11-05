@@ -48,10 +48,10 @@
     var map = L.map('map').setView([53.130818, 23.165722], 11);
     
     const places = [
-            [[53.130818, 23.165722], interestingIcon, 'photos/Branicki_Palace_in_Białystok.jpg', 'Палац Браницких - главная достопримечательность Белостока.', 'https://goo.gl/maps/WjDGw8ULBJ8tFVD58'],
-            [[53.110443, 23.217133], swimIcon, 'photos/Doilidy_beach.jpg', 'Пляж на дойлидах - самое популярное место для купания в Белостоке.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
-            [[53.108273, 23.223993], walkIcon, 'photos/Doilidy_park.jpg', 'Парк и остров на дойлидах. Отличное место для прогулки. Есть тренажеры и детская площадка.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
-            [[53.129666, 23.112108], grillIcon, 'photos/Stawy_marczukowskie.jpg', 'Ставы Марчуковские, небольшое место для прогулок. Есть стационарны грль, но часто занят.', 'https://goo.gl/maps/A4e3GXfW6BuCwvwM9'],
+            [[53.130818, 23.165722], interestingIcon, 'Branicki_Palace_in_Białystok.jpg', 'Палац Браницких - главная достопримечательность Белостока.', 'https://goo.gl/maps/WjDGw8ULBJ8tFVD58'],
+            [[53.110443, 23.217133], swimIcon, 'Doilidy_beach.jpg', 'Пляж на дойлидах - самое популярное место для купания в Белостоке.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
+            [[53.108273, 23.223993], walkIcon, 'Doilidy_park.jpg', 'Парк и остров на дойлидах. Отличное место для прогулки. Есть тренажеры и детская площадка.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
+            [[53.129666, 23.112108], grillIcon, 'Stawy_marczukowskie.jpg', 'Ставы Марчуковские, небольшое место для прогулок. Есть стационарны грль, но часто занят.', 'https://goo.gl/maps/A4e3GXfW6BuCwvwM9'],
     
     ]
 
@@ -60,7 +60,7 @@
     }).addTo(map);
 
     for (const place of places) {
-        L.marker(place[0], {icon: place[1]}).addTo(map).bindPopup('<img src="'+ place[2] +' " style="max-width:300px"></br>' + place[3] + '</br><a href="'+ place[4] +'" target="_blank">Google maps</a></br>');
+        L.marker(place[0], {icon: place[1]}).addTo(map).bindPopup('<img src="photos/'+ place[2] +' " style="max-width:300px"></br>' + place[3] + '</br><a href="'+ place[4] +'" target="_blank">Google maps</a></br>');
     }
         
     map.on('click', onMapClick);
