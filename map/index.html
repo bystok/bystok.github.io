@@ -49,10 +49,20 @@
     
     const places = [
             [[53.130818, 23.165722], interestingIcon, 'Branicki_Palace_in_Białystok.jpg', 'Палац Браницких - главная достопримечательность Белостока.', 'https://goo.gl/maps/WjDGw8ULBJ8tFVD58'],
+            [[53.153269, 22.978512], interestingIcon, 'Choroscz_park.jpg', 'Парк и музей интерьеров в Хороще. Красивейшее место для прогулок.', 'https://goo.gl/maps/VgGMHhozudvwzVku5'],
             [[53.110443, 23.217133], swimIcon, 'Doilidy_beach.jpg', 'Пляж на дойлидах - самое популярное место для купания в Белостоке.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
+            [[53.209078, 23.345034], swimIcon, 'Suprasl_beach.jpg', 'Пляж в Супрасле. При пляже есть спортивные тренажеры, детские площадки, футбольное поле и столы для настольного тенниса.', 'https://goo.gl/maps/x1vf7wwp4YbDUX14A'],
+            [[53.195666, 23.197054], swimIcon, 'Wasilkow_beach.jpg', 'Пляж в Василькове. Хорошее место чтобы поплавать и погулять вокруг залива.', 'https://goo.gl/maps/dfzrF2cuAj1h9iu28'],
+            [[53.148378, 22.979950], swimIcon, 'Choroscz_beach.jpg', 'Пляж в Хороще. Отличное место для плавания и активного отдыха, имеются спортивные тренажены, волейбольная и футбольная площадки.', 'https://goo.gl/maps/E7BkuF1G652XiNSMA'],
+            
+            
             [[53.108273, 23.223993], walkIcon, 'Doilidy_park.jpg', 'Парк и остров на дойлидах. Отличное место для прогулки. Есть тренажеры и детская площадка.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
-            [[53.129666, 23.112108], grillIcon, 'Stawy_marczukowskie.jpg', 'Ставы Марчуковские, небольшое место для прогулок. Есть стационарны грль, но часто занят.', 'https://goo.gl/maps/A4e3GXfW6BuCwvwM9'],
-    
+            [[53.169968, 23.473333], walkIcon, 'Krolowy_most.jpg', 'Смотровая башня около Кролового моста. Неплохой вид с башни и возможность прогуляться пару километров по лиственному лесу. Начинать маршрут лучше вот здесь: <a href="https://goo.gl/maps/mDo9EyU2dYUYJ88W6" target="_blank">https://goo.gl/maps/mDo9EyU2dYUYJ88W6</a>', 'https://goo.gl/maps/kDQjBKJM1bWaeWGP7'],
+            [[53.275582, 23.119937], walkIcon, 'Rezerwat_krzemianka.jpg', 'Заповедник Кремянка. Одно из самых красивых мест в околицах Белостока. Путь проложен по болоту с помошью деревянного помоста. Название произошло от большого обилия крмня, там же обнаружено древнее место добычи этого камня.</br> Если малая парковка при входе занята, то можно припарковаться и зайти с другой стороны: <a href="https://goo.gl/maps/NKvPQSBtf63YHoiUA" target="_blank">https://goo.gl/maps/NKvPQSBtf63YHoiUA</a>', 'https://goo.gl/maps/FLZtfRtNF1bLt7Cn8'],
+            [[53.129666, 23.112108], grillIcon, 'Stawy_marczukowskie.jpg', 'Ставы Марчуковские, небольшое место для прогулок. Есть стационарны гриль, но часто занят.', 'https://goo.gl/maps/A4e3GXfW6BuCwvwM9'],
+            [[53.226350, 23.353411], grillIcon, 'Grill_after_Suprasl.jpg', 'Место для гриля за супраслем. Располагается на поляне в лесу, есть большая беседка и столики.', 'https://goo.gl/maps/s59gCWAncvw8xA6a8'],
+
+   
     ]
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -60,7 +70,7 @@
     }).addTo(map);
 
     for (const place of places) {
-        L.marker(place[0], {icon: place[1]}).addTo(map).bindPopup('<img src="photos/'+ place[2] +' " style="max-width:300px"></br>' + place[3] + '</br><a href="'+ place[4] +'" target="_blank">Google maps</a></br>');
+        L.marker(place[0], {icon: place[1]}).addTo(map).bindPopup('<img src="photos/'+ place[2] +' " style="max-width:300px"></br>' + place[3] + '</br><a href="'+ place[4] +'" target="_blank">Это место на Google maps</a></br>');
     }
         
     map.on('click', onMapClick);
