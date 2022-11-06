@@ -50,19 +50,28 @@
     const places = [
             [[53.130818, 23.165722], interestingIcon, 'Branicki_Palace_in_Białystok.jpg', 'Палац Браницких - главная достопримечательность Белостока.', 'https://goo.gl/maps/WjDGw8ULBJ8tFVD58'],
             [[53.153269, 22.978512], interestingIcon, 'Choroscz_park.jpg', 'Парк и музей интерьеров в Хороще. Красивейшее место для прогулок.', 'https://goo.gl/maps/VgGMHhozudvwzVku5'],
-            [[53.110443, 23.217133], swimIcon, 'Doilidy_beach.jpg', 'Пляж на дойлидах - самое популярное место для купания в Белостоке.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
+            [[53.108092, 23.154133], interestingIcon, 'Centrum_pryrodniczy.jpg', 'Природный центр в кампусе Белостоцкого университета. Музей с большим количеством экспонатов на природную тематику(животные, камни, окаменелости...), вход бесплатный.', 'https://goo.gl/maps/Q3A4zT2ap8FQfuUi8'],
+            [[53.250747, 23.480537], interestingIcon, 'Arboretum.jpg', 'Арборетум имени повстанцев 1863г. Лесопарк с огромным количеством разнообразных видов растений. Образец прекрасного ланшафтного дизайна, есть озерцо с местом для отдыха и небольшой детской площадкой. Вход бесплатный, работает в теплое время года с 1 апреля по 30 сентября.', 'https://goo.gl/maps/W7DFyFAhW2zPhyZs7'],
+            [[53.204844, 23.334105], interestingIcon, 'Suprasl.jpg', 'Супрасль. Маленький, но красивый городок недалеко от Белостока. Можно посетить центральные улочки, музей книгопечатания и икон. Красивое место для прогулок.', 'https://goo.gl/maps/Mf8J1b8th47earRWA'],
+            [[53.492348, 22.640491], interestingIcon, 'Osowiec.jpg', 'Руины второго форта крепости Осовец. Место, впечатляющее масштабами строительства и разрушения.', 'https://goo.gl/maps/xNKaPVGRF9ayRZfe7'],
+            [[53.177832, 23.813707], interestingIcon, 'Kruszyniany.jpg', 'Деревянная татарская мечеть и старинное татарское кладбище в Крушинянах.', 'https://goo.gl/maps/RqM1EuiovkDWpRRWA'],
+            [[53.110443, 23.217133], swimIcon, 'Doilidy_beach.jpg', 'Пляж на Дойлидах - самое популярное место для купания в Белостоке.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
             [[53.209078, 23.345034], swimIcon, 'Suprasl_beach.jpg', 'Пляж в Супрасле. При пляже есть спортивные тренажеры, детские площадки, футбольное поле и столы для настольного тенниса.', 'https://goo.gl/maps/x1vf7wwp4YbDUX14A'],
             [[53.195666, 23.197054], swimIcon, 'Wasilkow_beach.jpg', 'Пляж в Василькове. Хорошее место чтобы поплавать и погулять вокруг залива.', 'https://goo.gl/maps/dfzrF2cuAj1h9iu28'],
             [[53.148378, 22.979950], swimIcon, 'Choroscz_beach.jpg', 'Пляж в Хороще. Отличное место для плавания и активного отдыха, имеются спортивные тренажены, волейбольная и футбольная площадки.', 'https://goo.gl/maps/E7BkuF1G652XiNSMA'],
-            
-            
-            [[53.108273, 23.223993], walkIcon, 'Doilidy_park.jpg', 'Парк и остров на дойлидах. Отличное место для прогулки. Есть тренажеры и детская площадка.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
-            [[53.169968, 23.473333], walkIcon, 'Krolowy_most.jpg', 'Смотровая башня около Кролового моста. Неплохой вид с башни и возможность прогуляться пару километров по лиственному лесу. Начинать маршрут лучше вот здесь: <a href="https://goo.gl/maps/mDo9EyU2dYUYJ88W6" target="_blank">https://goo.gl/maps/mDo9EyU2dYUYJ88W6</a>', 'https://goo.gl/maps/kDQjBKJM1bWaeWGP7'],
-            [[53.275582, 23.119937], walkIcon, 'Rezerwat_krzemianka.jpg', 'Заповедник Кремянка. Одно из самых красивых мест в околицах Белостока. Путь проложен по болоту с помошью деревянного помоста. Название произошло от большого обилия крмня, там же обнаружено древнее место добычи этого камня.</br> Если малая парковка при входе занята, то можно припарковаться и зайти с другой стороны: <a href="https://goo.gl/maps/NKvPQSBtf63YHoiUA" target="_blank">https://goo.gl/maps/NKvPQSBtf63YHoiUA</a>', 'https://goo.gl/maps/FLZtfRtNF1bLt7Cn8'],
-            [[53.129666, 23.112108], grillIcon, 'Stawy_marczukowskie.jpg', 'Ставы Марчуковские, небольшое место для прогулок. Есть стационарны гриль, но часто занят.', 'https://goo.gl/maps/A4e3GXfW6BuCwvwM9'],
-            [[53.226350, 23.353411], grillIcon, 'Grill_after_Suprasl.jpg', 'Место для гриля за супраслем. Располагается на поляне в лесу, есть большая беседка и столики.', 'https://goo.gl/maps/s59gCWAncvw8xA6a8'],
-
-   
+            [[52.948941, 23.769303], swimIcon, 'Siemianowka.jpg', 'Пляж в Семянувке. Шикарный пляж с местами на гриль и смотровой башней. Имеется поле для кемпинга, детская площадка а также спортивные объекты.', 'https://goo.gl/maps/ZGa1obMJL28sEzBf6'],
+            [[53.308468, 23.257806], swimIcon, 'Czapielowka.jpg', 'Пляж на заливе Чапелювка. Отличный пляж с большой пристанью.', 'https://goo.gl/maps/UVNUCf1uDVnxh5tv6'],
+            [[53.108273, 23.223993], walkIcon, 'Doilidy_park.jpg', 'Парк и остров на Дойлидах. Отличное место для прогулки. Есть тренажеры и детская площадка.', 'https://goo.gl/maps/CXuRBqUFVSgzDcHZ9'],
+            [[53.169968, 23.473333], walkIcon, 'Krolowy_most.jpg', 'Смотровая башня около Королевского моста. Неплохой вид с башни и возможность прогуляться пару километров по лиственному лесу. Начинать маршрут лучше вот здесь: <a href="https://goo.gl/maps/mDo9EyU2dYUYJ88W6" target="_blank">https://goo.gl/maps/mDo9EyU2dYUYJ88W6</a>', 'https://goo.gl/maps/kDQjBKJM1bWaeWGP7'],
+            [[53.275582, 23.119937], walkIcon, 'Rezerwat_krzemianka.jpg', 'Заповедник Кремянка. Одно из самых красивых мест в околицах Белостока. Путь проложен по болоту с помощью деревянного помоста. Название произошло от большого обилия кремня, там же обнаружено древнее место добычи этого камня.</br> Если малая парковка при входе занята, то можно припарковаться и зайти с другой стороны: <a href="https://goo.gl/maps/NKvPQSBtf63YHoiUA" target="_blank">https://goo.gl/maps/NKvPQSBtf63YHoiUA</a>', 'https://goo.gl/maps/FLZtfRtNF1bLt7Cn8'],
+            [[53.169161, 23.169017], walkIcon, 'Las_pietrasze.jpg', 'Лес Петраше. Большой лес для прогулок в черте города. В лесу можно найти ручей, родник, различные памятники. Можно встретить кабана и лося.</br>Места парковки:</br><a href="https://goo.gl/maps/Gcdw79RUkRpVHMsE8" target="_blank">https://goo.gl/maps/Gcdw79RUkRpVHMsE8</a></br><a href="https://goo.gl/maps/kFwtJiaiJhvpMcZ29" target="_blank">https://goo.gl/maps/kFwtJiaiJhvpMcZ29</a></br><a href="https://goo.gl/maps/RQzKXZwhG5mgdvrMA" target="_blank">https://goo.gl/maps/RQzKXZwhG5mgdvrMA</a>', 'https://goo.gl/maps/SxD8xmoXLDiHHVEy8'],
+            [[53.261516, 23.638485], walkIcon, 'Poczopek.jpg', 'Саливариум - лесной парк. Чудесное место для прогулки, на большом поле располагается озерцо с островом, на который можно перейти по деревянному мосту, вольеры с птицами, гигантские камни, родник и многое другое.', 'https://goo.gl/maps/Bn62C5wkhHqpmVm69'],
+            [[53.084269, 22.831147], walkIcon, 'Sliwno_Waniewo.jpg', 'Переправа Сливно-Ванево. Незабываемое место, мостки простираются между берегами реки, периодически прерываются паромными переправами, на которых нужно самостоятельно перетянуть себя на другую сторону. Имеется смотровая башня на середине переправы.', 'https://goo.gl/maps/rxVR8sgcwU5xdPs58'],
+            [[53.486475, 22.627562], walkIcon, 'Osowiec_walk.jpg', 'Туристическая тропа, ведущая к руинам второго форта крепости Осовец. По пути имеется смотровая башня.', 'https://goo.gl/maps/RSBPGsgyrEse87pw8'],
+            [[53.129666, 23.112108], grillIcon, 'Stawy_marczukowskie.jpg', 'Марчуковские пруды - приятное место для коротких прогулок. Есть стационарный гриль, но часто занят.', 'https://goo.gl/maps/A4e3GXfW6BuCwvwM9'],
+            [[53.226350, 23.353411], grillIcon, 'Grill_after_Suprasl.jpg', 'Место для гриля за Супраслем. Располагается на поляне в лесу, есть большая беседка и столики.', 'https://goo.gl/maps/s59gCWAncvw8xA6a8'],
+            [[53.254565, 23.481306], grillIcon, 'Grill_kopna_gora.jpg', 'Поле с многочисленными беседками и местами для гриля. Есть красивая узкоколейка, уходящая в лес.', 'https://goo.gl/maps/QRLMige1QBG2QwsE6'],
+            [[53.219978, 23.298645], grillIcon, 'Polko.jpg', 'Поляна у реки Супрасль. Есть дикий пляж, а также места для гриля. Если ехать на машине и не повезет, то можно получить штраф за въезд в лес.', 'https://goo.gl/maps/zSnkvPF6EbdAVtr1A'],  
     ]
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -77,4 +86,4 @@
 </script>
 
 </body>
-</html> 
+</html>
